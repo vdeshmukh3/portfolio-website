@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .projects-heading {
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-container {
+            width: calc(50% - 20px);
+            /* Adjusted width to accommodate equal spacing */
+            margin-bottom: 40px;
+            /* Increased margin-bottom for more spacing */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid white;
+            /* Set border color to white */
+        }
+
+
+
+
+        .project-box {
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+            padding: 20px;
+        }
+
+        .project-image {
+            width: 100%;
+            max-height: 1200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-name {
+            font-size: 24px;
+            margin-top: 0;
+            padding-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .project-languages {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .arrow {
+            font-size: 32px;
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            /* Add a top margin of 40px to create space */
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-rights {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            .left, .right {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .project-box {
+                margin-bottom: 20px;
+            }
+
+            .project-image {
+                max-height: 600px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .footer-first, .footer-second, .footer-third, .footer-fourth {
+                margin-bottom: 10px;
+            }
+
+            .footer-rights {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Varad's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="projects-heading">Projects</h2>
+        <section id="projects-section">
+            <div class="container">
+                <div class="project-box">
+                    <img src="food1.jpg" alt="Project 1" class="project-image" onclick="changeImage(this)">
+                    <div class="image-arrows">
+                        <span class="arrow left-arrow" onclick="previousImage()">&#8249;</span>
+                        <span class="arrow right-arrow" onclick="nextImage()">&#8250;</span>
+                    </div>
+                    <h2 class="project-name">Indian Food Generator</h2>
+                    <p class="project-description">The Indian Food Generator project aims to create an interactive web
+                        application that generates random Indian food recipes for users. Developed using Python, HTML,
+                        and CSS, this project will allow users to explore the rich culinary heritage of Indian cuisine
+                        by providing them with unique and authentic recipe suggestions.</p>
+                    <p class="project-languages">Languages used: HTML, CSS, and Python</p>
+                </div>
+
+                <div class="project-box">
+                    <img src="blog1.jpg" alt="Project 2" class="project-image" onclick="changeImage1(this)">
+                    <div class="image-arrows">
+                        <span class="arrow left-arrow" onclick="previousImage1()">&#8249;</span>
+                        <span class="arrow right-arrow" onclick="nextImage1()">&#8250;</span>
+                    </div>
+                    <h2 class="project-name">Blog Website with Admin Dashboard</h2>
+                    <p class="project-description">The Blog Website with Admin Dashboard project aims to develop a
+                        dynamic and user-friendly blogging platform. Built with PHP, HTML, and CSS, this project will
+                        allow users to create, manage, and publish blog posts, while providing an intuitive admin
+                        dashboard for site administrators to oversee the content and user management.</p>
+                    <p class="project-languages">Languages used: HTML, CSS, PHP, and MySQL</p>
+                </div>
+
+                <div class="project-box">
+                    <img src="cafe1.jpg" alt="Project 3" class="project-image" onclick="changeImage2(this)">
+                    <div class="image-arrows">
+                        <span class="arrow left-arrow" onclick="previousImage2()">&#8249;</span>
+                        <span class="arrow right-arrow" onclick="nextImage2()">&#8250;</span>
+                    </div>
+                    <h2 class="project-name">Cafe Zone App</h2>
+                    <p class="project-description">The Cafe Zone App Dashboard project aims to create a comprehensive
+                        and user-friendly administrative dashboard for managing a café business. Developed using Android
+                        Studio and integrated with Firebase, this dashboard will enable café owners and managers to
+                        efficiently manage various aspects of their operations, including menu management, order
+                        tracking, Two waitlist System, and Live Restaurent Feed.</p>
+                    <p class="project-languages">Languages used: Android Studio, XML, Java, and FireBase</p>
+                </div>
+
+                <div class="project-box">
+                    <img src="ecommerce.jpg" alt="Project 4" class="project-image" onclick="changeImage3(this)">
+                    <div class="image-arrows">
+                        <span class="arrow left-arrow" onclick="previousImage3()">&#8249;</span>
+                        <span class="arrow right-arrow" onclick="nextImage3()">&#8250;</span>
+                    </div>
+                    <h2 class="project-name">Ecommerce Business Analysis Dashboard</h2>
+                    <p class="project-description">The Business Analysis Dashboard project aims to provide a
+                        comprehensive and visually appealing data analysis platform using Power BI. This dashboard will
+                        enable businesses to gain valuable insights into their operations, identify trends, and make
+                        data-driven decisions. With Power BI, the project will leverage powerful data visualization and
+                        analytical capabilities to present complex business data in a user-friendly and intuitive
+                        manner. The dashboard will consolidate data from various sources, such as sales figures,
+                        financial data, customer information, and market trends, into a single interactive interface.
+                    </p>
+                    <p class="project-languages">Languages used: Power BI</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Varad's Developer Portfolio</h3>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://github.com/vdeshmukh3">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/varad-deshmukh-49b213200/">LinkedIn</a></li>
+                    <li><a
+                            href="https://www.cloudskillsboost.google/public_profiles/d2a0438a-e611-4c22-8f47-cc91e17808fc">Google
+                            badges</a></li>
+                    <li><a href="https://instagram.com/_.varad._44?igshid=MzNlNGNkZWQ4Mg==">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyrights &#169; www.varadportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script>
+        var images = ["food1.jpg", "food2.jpg"];
+        var images1 = ["blog1.jpg", "blog2.jpg", "blog3.jpg", "blog4.jpg"];
+        var images2 = ["cafe1.jpg", "cafe2.jpg", "cafe3.jpg", "cafe5.jpg"];
+        var images3 = ["ecommerce.jpg"]; // Array of image file names
+        var currentIndex = 0; // Current index of the displayed image
+
+        function changeImage(image) {
+            currentIndex = (currentIndex + 1) % images.length; // Increment index and wrap around
+            image.src = images[currentIndex]; // Change the image source to the new image
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Increment index and wrap around
+            var image = document.querySelector(".project-image");
+            image.src = images[currentIndex]; // Change the image source to the next image
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Decrement index and wrap around
+            var image = document.querySelector(".project-image");
+            image.src = images[currentIndex]; // Change the image source to the previous image
+        }
+
+        function changeImage1(image1) {
+            currentIndex = (currentIndex + 1) % images1.length; // Increment index and wrap around
+            image1.src = images1[currentIndex]; // Change the image source to the new image
+        }
+
+        function nextImage1() {
+            currentIndex = (currentIndex + 1) % images1.length; // Increment index and wrap around
+            var image1 = document.querySelector(".project-image");
+            image1.src = images1[currentIndex]; // Change the image source to the next image
+        }
+
+        function previousImage1() {
+            currentIndex = (currentIndex - 1 + images1.length) % images1.length; // Decrement index and wrap around
+            var image1 = document.querySelector(".project-image");
+            image1.src = images1[currentIndex]; // Change the image source to the previous image
+        }
+
+        function changeImage2(image2) {
+            currentIndex = (currentIndex + 1) % images2.length; // Increment index and wrap around
+            image2.src = images2[currentIndex]; // Change the image source to the new image
+        }
+
+        function nextImage2() {
+            currentIndex = (currentIndex + 1) % images2.length; // Increment index and wrap around
+            var image2 = document.querySelector(".project-image");
+            image2.src = images2[currentIndex]; // Change the image source to the next image
+        }
+
+        function previousImage2() {
+            currentIndex = (currentIndex - 1 + images2.length) % images2.length; // Decrement index and wrap around
+            var image2 = document.querySelector(".project-image");
+            image2.src = images2[currentIndex]; // Change the image source to the previous image
+        }
+
+        function changeImage3(image3) {
+            currentIndex = (currentIndex + 1) % images3.length; // Increment index and wrap around
+            image3.src = images3[currentIndex]; // Change the image source to the new image
+        }
+
+        function nextImage3() {
+            currentIndex = (currentIndex + 1) % images3.length; // Increment index and wrap around
+            var image3 = document.querySelector(".project-image");
+            image3.src = images3[currentIndex]; // Change the image source to the next image
+        }
+
+        function previousImage3() {
+            currentIndex = (currentIndex - 1 + images3.length) % images3.length; // Decrement index and wrap around
+            var image3 = document.querySelector(".project-image");
+            image3.src = images3[currentIndex]; // Change the image source to the previous image
+        }
+    </script>
